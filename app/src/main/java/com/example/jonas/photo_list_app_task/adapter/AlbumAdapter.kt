@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.jonas.photo_list_app_task.R
+import com.example.jonas.photo_list_app_task.activity.AlbumActivity
 import com.example.jonas.photo_list_app_task.model.Album
 import kotlinx.android.synthetic.main.layout_album_recyclerview.view.*
 
@@ -17,9 +18,10 @@ class AlbumAdapter (private val albumList: List<Album>): RecyclerView.Adapter<Al
     inner class ItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(currentItem: Album) {
-            //TODO bind to view
-            d("TAG", "ALBUM: ${currentItem.title}")
             itemView.album_text_title.text = currentItem.title
+            itemView.setOnClickListener {
+                (context as AlbumActivity).goToPhotoActivity(currentItem.id.toString())
+            }
         }
     }
 
