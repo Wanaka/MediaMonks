@@ -30,10 +30,11 @@
             app:layout_constraintTop_toBottomOf="@+id/include3" app:layout_constraintStart_toStartOf="parent"
     />
     <TextView
-            android:text="Title"
-            android:layout_width="wrap_content"
+            android:text="hej"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/photoDetails_text_title" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/photoDetails_image" android:layout_marginTop="32dp"
-            android:layout_marginStart="32dp"/>
+            android:layout_marginStart="32dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="32dp"/>
 </android.support.constraint.ConstraintLayout>

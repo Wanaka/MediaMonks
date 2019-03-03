@@ -20,7 +20,7 @@ class PhotosAdapter (private val photosList: List<Photos>): RecyclerView.Adapter
         fun bind(currentItem: Photos) {
             Picasso.with(context).load(currentItem.thumbnailUrl).into(itemView.photos_image)
             itemView.setOnClickListener {
-                (context as PhotosActivity).goToPhotoDetailsActivity(currentItem.url)
+                (context as PhotosActivity).goToPhotoDetailsActivity(currentItem.url, currentItem.title)
             }
         }
     }

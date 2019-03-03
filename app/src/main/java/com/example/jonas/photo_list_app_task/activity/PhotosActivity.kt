@@ -48,9 +48,10 @@ class PhotosActivity : AppCompatActivity() {
         }
     }
 
-    fun goToPhotoDetailsActivity(photoUrl: String){
+    fun goToPhotoDetailsActivity(photoUrl: String, photoTitle: String){
         val intent = Intent(this, PhotoDetailActivity::class.java)
-        intent.putExtra(Constant.EXTRA_BUNDLE, photoUrl)
+        intent.putExtra(Constant.EXTRA_URL, photoUrl)
+        intent.putExtra(Constant.EXTRA_TITLE, photoTitle)
         startActivity(intent)
     }
 }

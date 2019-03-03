@@ -5,4 +5,5 @@
     <string name="photosDetail_toolbar_title">Photo Details</string>
     <string name="album_recyclerview_title">Photo Album</string>
     <string name="loading_data_failed">Loading data failed</string>
+    <string name="photoDetails_text"/>
 </resources>
