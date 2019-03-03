@@ -2,14 +2,13 @@ package com.example.jonas.photo_list_app_task.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
-import android.util.Log.*
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.jonas.photo_list_app_task.R
 import com.example.jonas.photo_list_app_task.activity.AlbumActivity
 import com.example.jonas.photo_list_app_task.model.Album
-import kotlinx.android.synthetic.main.layout_album_recyclerview.view.*
+import kotlinx.android.synthetic.main.layout_album_recyclerview_item.view.*
 
 class AlbumAdapter (private val albumList: List<Album>): RecyclerView.Adapter<AlbumAdapter.ItemHolder>() {
 
@@ -32,7 +31,7 @@ class AlbumAdapter (private val albumList: List<Album>): RecyclerView.Adapter<Al
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlbumAdapter.ItemHolder {
         context = parent.context
-        return ItemHolder(LayoutInflater.from(context).inflate(R.layout.layout_album_recyclerview, parent, false))
+        return ItemHolder(LayoutInflater.from(context).inflate(R.layout.layout_album_recyclerview_item, parent, false))
     }
 
     override fun getItemCount() = albumList.size
