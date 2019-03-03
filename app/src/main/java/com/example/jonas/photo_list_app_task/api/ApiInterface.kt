@@ -11,7 +11,7 @@ interface ApiInterface {
     @GET("/albums")
     fun getAlbums(): Call<List<Album>>
 
-    @GET("/albums/{id}/photos")
+    @GET("/albums/{albumId}/photos")
     fun getPhotos(
         @Query("albumId") albumId: String
     ): Call<List<Photos>>

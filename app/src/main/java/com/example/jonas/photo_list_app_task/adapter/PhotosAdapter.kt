@@ -2,11 +2,9 @@ package com.example.jonas.photo_list_app_task.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
-import android.util.Log.d
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import com.example.jonas.photo_list_app_task.R
 import com.example.jonas.photo_list_app_task.activity.PhotosActivity
 import com.example.jonas.photo_list_app_task.model.Photos
@@ -21,10 +19,8 @@ class PhotosAdapter (private val photosList: List<Photos>): RecyclerView.Adapter
 
         fun bind(currentItem: Photos) {
             Picasso.with(context).load(currentItem.thumbnailUrl).into(itemView.photos_image)
-            d("TAG", "Number of items in list: ${currentItem.id}")
-
             itemView.setOnClickListener {
-                (context as PhotosActivity).goToPhotoDetailsActivity(currentItem.id.toString())
+                (context as PhotosActivity).goToPhotoDetailsActivity(currentItem.url)
             }
         }
     }

@@ -18,6 +18,7 @@ class AlbumAdapter (private val albumList: List<Album>): RecyclerView.Adapter<Al
 
         fun bind(currentItem: Album) {
             itemView.album_text_title.text = currentItem.title
+            itemView.album_text_number.text = currentItem.id.toString()
             itemView.setOnClickListener {
                 (context as AlbumActivity).goToPhotoActivity(currentItem.id.toString())
             }

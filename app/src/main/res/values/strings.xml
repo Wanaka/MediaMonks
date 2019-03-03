@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">photo_list_app_task</string>
+    <string name="album_toolbar_title">Albums</string>
+    <string name="photos_toolbar_title">Photos</string>
+    <string name="photosDetail_toolbar_title">Photo Details</string>
+    <string name="album_recyclerview_title">Photo Album</string>
+    <string name="loading_data_failed">Loading data failed</string>
 </resources>
