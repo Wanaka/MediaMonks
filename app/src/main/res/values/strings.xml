@@ -6,4 +6,6 @@
     <string name="album_recyclerview_title">Photo Album</string>
     <string name="loading_data_failed">Loading data failed</string>
     <string name="photoDetails_text"/>
+    <string name="album_numb">numb</string>
+    <string name="album_text_title">Title</string>
 </resources>

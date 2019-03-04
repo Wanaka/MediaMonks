@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activity.PhotosActivity" android:id="@+id/photos_toolbar">
+        tools:context=".activity.PhotosActivity">
 
     <ProgressBar
             style="?android:attr/progressBarStyle"
@@ -21,14 +21,14 @@
     <include android:layout_width="0dp" android:layout_height="wrap_content" layout="@layout/default_toolbar"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintTop_toTopOf="parent" android:id="@+id/include2"/>
+             app:layout_constraintTop_toTopOf="parent" android:id="@+id/photos_toolbar"/>
 
     <android.support.v7.widget.RecyclerView
             android:layout_width="0dp"
-            android:layout_height="0dp" app:layout_constraintTop_toBottomOf="@+id/include2"
+            android:layout_height="0dp" app:layout_constraintTop_toBottomOf="@+id/photos_toolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/photos_recyclerview"
-            android:background="@color/colorBackgroundColorDark"/>
+            android:background="@color/colorBackgroundColorGrey"/>
 
 </android.support.constraint.ConstraintLayout>

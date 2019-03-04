@@ -10,14 +10,14 @@
     <include android:layout_width="0dp" android:layout_height="wrap_content" layout="@layout/default_toolbar"
              app:layout_constraintEnd_toEndOf="parent"
              app:layout_constraintStart_toStartOf="parent"
-             app:layout_constraintTop_toTopOf="parent" android:id="@+id/include"/>
+             app:layout_constraintTop_toTopOf="parent" android:id="@+id/album_toolbar"/>
     <android.support.v7.widget.RecyclerView
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintTop_toBottomOf="@+id/include" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/album_toolbar" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" android:id="@+id/album_recyclerview"
-            android:background="@color/colorBackgroundColorDark"/>
+            android:background="@color/colorBackgroundColorGrey"/>
     <ProgressBar
             style="?android:attr/progressBarStyle"
             android:layout_width="wrap_content"

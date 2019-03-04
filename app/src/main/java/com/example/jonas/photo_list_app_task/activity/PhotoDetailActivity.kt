@@ -3,7 +3,6 @@ package com.example.jonas.photo_list_app_task.activity
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import com.example.jonas.photo_list_app_task.R
 import com.example.jonas.photo_list_app_task.constant.Constant

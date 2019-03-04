@@ -15,22 +15,22 @@
             android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:layout_marginBottom="8dp"
             android:background="@drawable/album_background"/>
     <TextView
-            android:text="Title"
+            android:text="@string/album_text_title"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:id="@+id/album_text_title"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginStart="16dp" app:layout_constraintBottom_toBottomOf="@+id/imageView"
-            android:layout_marginBottom="8dp"/>
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            android:layout_marginBottom="8dp" app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="@+id/imageView" android:layout_marginEnd="32dp"/>
     <TextView
             android:text="@string/album_recyclerview_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/textView"
             app:layout_constraintTop_toTopOf="@+id/imageView" app:layout_constraintStart_toStartOf="@+id/imageView"
-            android:layout_marginStart="8dp" android:layout_marginTop="8dp" android:textSize="18sp"/>
+            android:layout_marginStart="24dp" android:layout_marginTop="8dp" android:textSize="18sp"/>
     <TextView
-            android:text="numb"
+            android:text="@string/album_numb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/album_text_number" app:layout_constraintStart_toEndOf="@+id/textView"

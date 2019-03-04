@@ -43,6 +43,7 @@ class AlbumActivity : AppCompatActivity() {
             })
         }
         catch(e : Exception) {
+            album_progressBar.visibility = View.GONE
             Toast.makeText(this, R.string.loading_data_failed, Toast.LENGTH_SHORT).show()
         }
     }

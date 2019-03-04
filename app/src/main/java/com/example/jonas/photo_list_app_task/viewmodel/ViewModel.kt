@@ -19,5 +19,4 @@ class ViewModel: ViewModel(){
             return repo.getPhotos(albumId)
         }
     }
-
 }

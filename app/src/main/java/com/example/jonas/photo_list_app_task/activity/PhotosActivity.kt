@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.default_toolbar.*
 class PhotosActivity : AppCompatActivity() {
 
     private lateinit var photosAdapter: PhotosAdapter
-    private lateinit var albumId:String
+    private lateinit var albumId: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +32,8 @@ class PhotosActivity : AppCompatActivity() {
     }
 
     private fun init(){
-        photos_recyclerview.layoutManager =  GridLayoutManager(this, 2)
         photos_progressBar.visibility = View.VISIBLE
+        photos_recyclerview.layoutManager =  GridLayoutManager(this, 2)
         albumId = intent.getStringExtra(Constant.EXTRA_BUNDLE)
     }
 
@@ -46,6 +46,7 @@ class PhotosActivity : AppCompatActivity() {
             })
         }
         catch(e : Exception) {
+            photos_progressBar.visibility = View.GONE
             Toast.makeText(this, R.string.loading_data_failed, Toast.LENGTH_SHORT).show()
         }
     }

@@ -5,5 +5,5 @@
     <color name="colorAccent">#d81b60</color>
     <color name="colorDefaultPhotoDetail">#FFE2E2E2</color>
     <color name="colorWhite">#ffffff</color>
-    <color name="colorBackgroundColorDark">#afafaf</color>
+    <color name="colorBackgroundColorGrey">#afafaf</color>
 </resources>
