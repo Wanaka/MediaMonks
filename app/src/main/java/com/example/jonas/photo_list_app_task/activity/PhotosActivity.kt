@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.example.jonas.photo_list_app_task.R
@@ -24,6 +25,7 @@ class PhotosActivity : AppCompatActivity() {
         setContentView(R.layout.activity_photos)
         setSupportActionBar(default_toolbar)
         supportActionBar?.setTitle(R.string.photos_toolbar_title)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         init()
         getPhotosToRecyclerView()
@@ -53,5 +55,15 @@ class PhotosActivity : AppCompatActivity() {
         intent.putExtra(Constant.EXTRA_URL, photoUrl)
         intent.putExtra(Constant.EXTRA_TITLE, photoTitle)
         startActivity(intent)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item!!.itemId) {
+            android.R.id.home -> {
+                finish()
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+        return true
     }
 }

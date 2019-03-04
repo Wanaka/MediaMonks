@@ -2,6 +2,7 @@ package com.example.jonas.photo_list_app_task.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.example.jonas.photo_list_app_task.R
@@ -17,6 +18,7 @@ class PhotoDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_photo_detail)
         setSupportActionBar(default_toolbar)
         supportActionBar?.setTitle(R.string.photosDetail_toolbar_title)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         init()
     }
@@ -29,6 +31,15 @@ class PhotoDetailActivity : AppCompatActivity() {
         catch(e : Exception) {
             Toast.makeText(this, R.string.loading_data_failed, Toast.LENGTH_SHORT).show()
         }
+    }
 
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        when (item!!.itemId) {
+            android.R.id.home -> {
+                finish()
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+        return true
     }
 }

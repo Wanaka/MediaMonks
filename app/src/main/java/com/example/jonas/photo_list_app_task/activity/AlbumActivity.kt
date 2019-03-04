@@ -5,6 +5,7 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.example.jonas.photo_list_app_task.R
@@ -29,12 +30,14 @@ class AlbumActivity : AppCompatActivity() {
     }
 
     private fun init(){
+        album_progressBar.visibility = View.VISIBLE
         album_recyclerview.layoutManager = LinearLayoutManager(this, LinearLayout.VERTICAL, false)
     }
 
     private fun getAlbumsToRecyclerView(){
         try {
             ViewModel.getAlbums().observe(this, Observer {
+                album_progressBar.visibility = View.GONE
                 albumAdapter = AlbumAdapter(it!!)
                 album_recyclerview.adapter = albumAdapter
             })

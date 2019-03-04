@@ -13,5 +13,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:titleTextColor="@color/colorWhite"/>
+            app:titleTextColor="@color/colorWhite"
+            app:theme="@style/ToolbarColoredBackArrow"
+    />
 </android.support.constraint.ConstraintLayout>
